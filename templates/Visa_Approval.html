@@ -1,0 +1,53 @@
+<html>
+<body>
+<style>
+ body{
+background-image: url('../static/VISA_IMAGE.jpg');
+background-position: center;
+font-family:sans-serif;
+background-size:cover;
+}
+button[type=submit] {
+  background-color: #c93b10;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 14px;
+  
+  float: center;
+}
+select {
+      font-size:15px; 
+    }
+input[type="number"]
+{
+    font-size:15px;
+}
+</style>
+<div class='idiv'>
+<br><br><br>
+<h2><font size="6" color="Black">H-1B VISA Approval Prediction</font><h2><br>
+<form action = "./predict" method = "post">
+
+<select id="FULL_TIME_POSITION" name="FULL_TIME_POSITION" required="required">
+<option value="">Select application position</option>
+<option value="1">YES(FULL-TIME)</option>    
+<option value="0">NO(PART-TIME)</option>
+  </select><br><br>
+
+<input class="form-input" type="number" name="PREVAILING_WAGE" placeholder="Enter your wage" required="required"><br><br>
+
+<input class="form-input" type="number" name="YEAR" placeholder="Enter your Application year" required="required"><br><br>
+
+<select id="SOC_NAME" name="SOC_NAME" required="required">
+<option value="">Select occupation code for the employment</option>
+    <option value="0">Education</option>
+    <option value="1">Administrative</option>
+ <option value="2">Others</option>
+
+  </select><br><br>
+<button type="submit" class="my-cta-button">Predict</button>
+</form>
+<font size="2"> {{prediction}} </font>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body {
+  background-image: url("../static/VISA_IMAGE.jpg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+h1 {
+  text-align: center;
+  font-size:55px;
+  text-transform: uppercase;
+  color: #000000; 
+}
+h4{
+  text-align: center;
+  font-size: 40px;
+  color: #eeffa3;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 19px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:610px;
+}
+
+a:hover, a:active {
+  padding: 0px 5px
+  text-align: center;
+  float: center;
+  vertical-align: middle;
+  background-color: red;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Welcome to H1B Visa Approval<br> Status Analysis</h1><br><br><br><br><br><br><br>
+<h4><br><br>Here you can analyse your visa approval status</h4>
+
+<a href="{{url_for('Visa_Approval')}}">ANALYSE</a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>H-1B Visa Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+<style>
+        body{
+background-image: url('../static/VISA_IMAGE.jpg');
+background-position: center;
+font-family:sans-serif;
+background-size:cover;
+}
+</style>
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <br><h2 class='container-heading'><font size="6">H-1B Visa Predictor</span></h2>
+            <div class='description'>
+    			<p><font size="4">A Machine Learning Web App Built with Flask</font></p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction_text==1 %}
+				<h1><font size="2"><b>Prediction: <span class='danger'><u>CERTIFIED-WITHDRAWN</font></b></u></span></h1>
+				
+			{% elif prediction_text==0 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>'CERTIFIED'</font></b></u></span></h1>
+			{% elif prediction_text==2 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>DENIED</font></u></b></span></h1>
+			{% elif prediction_text==3 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>WITHDRAWN</font></u></b></span></h1>
+			{% elif prediction_text==4 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>PENDING QUALITY AND COMPLIANCE REVIEW - UNASSIGNED</font></b></u></span></h1>
+			{% elif prediction_text==5 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>REJECTED</font></b></u></span></h1>
+			{% elif prediction_text==6 %}
+				<h1><font size="2"><b>Prediction: <span class='safe'><u>'INVALIDATED'</font></b></u></span></h1>
+			
+			{% endif %}
+		</div>
+
+	
+
+	</body>
+</html>
